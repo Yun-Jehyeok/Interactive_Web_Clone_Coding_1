@@ -1,0 +1,71 @@
+html {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+	margin: 0;
+}
+div, section, header, footer, p, h1, h2 {
+	box-sizing: border-box;
+}
+a {
+	color: royalblue;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.global-width {
+	max-width: 620px;
+	/*center 정렬*/
+	margin: 0 auto;
+
+	padding: 0 1rem;
+}
+.scroll-graphic {
+	/* sticky하고 top을 0으로 지정하면 */
+	/* 해당 div가 화면의 맨 위에 닿았을 때부터 */
+	/* 밑으로 안내려가고 위에 붙어있음 */
+	position: sticky;
+	top: 0;
+	/* sticky 하면 height가 설정되지 않기에 따로 설정해줘야 합니다. */
+	height: 100vh;
+}
+.graphic-item {
+	display: flex;
+	/* 세로 방향 정렬 */
+	align-items: center;
+	/* 가로 방향 정렬 */
+	justify-content: center;;
+	/* 모든 이미지 겹쳐지게 */
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	/* 0.5초간 부드럽게 이미지가 나오게 하기 위해 */
+	transition: 0.5s;
+}
+.visible {
+	opacity: 1;
+}
+.scene-img {
+	max-height: 100vh;
+}
+.scroll-text {
+	/* 말풍선을 그림 위로 올리려고 */
+	position: relative;
+}
+.step {
+	margin-bottom: 60vh;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+.bird {
+	position: absolute;
+	left: 0;
+	bottom: 70%;
+	width: 100px;
+}
