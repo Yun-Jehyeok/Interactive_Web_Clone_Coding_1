@@ -22,6 +22,7 @@ img {
 	padding: 0 1rem;
 }
 .scroll-graphic {
+	overflow-x: hidden;
 	/* sticky하고 top을 0으로 지정하면 */
 	/* 해당 div가 화면의 맨 위에 닿았을 때부터 */
 	/* 밑으로 안내려가고 위에 붙어있음 */
@@ -68,4 +69,13 @@ img {
 	left: 0;
 	bottom: 70%;
 	width: 100px;
+	/* 새 크기의 100%만큼 왼쪽으로 초기값 설정 */
+	transform: translateX(-100%);
+	/* 0.5초 후에 1.5초 동안 애니메이트 */
+	transition: 1.5s 0.5s linear;
+}
+
+[data-index="5"] .bird {
+	left: 30%;
+	bottom: 30%;
 }
